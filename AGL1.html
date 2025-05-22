@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRO LEASING - Financování zemědělské techniky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom green color palette */
+        .bg-agro-green-500 { background-color: #4CAF50; } /* A vibrant green */
+        .text-agro-green-500 { color: #4CAF50; }
+        .border-agro-green-500 { border-color: #4CAF50; }
+        .hover\:bg-agro-green-600:hover { background-color: #43A047; } /* Slightly darker green for hover */
+        .bg-agro-green-100 { background-color: #E8F5E9; } /* Light green for backgrounds */
+        .bg-agro-green-800 { background-color: #2E7D32; } /* Darker green for footer/accents */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://placehold.co/60x60/4CAF50/FFFFFF?text=AGRO" alt="AGRO LEASING Logo" class="h-16 w-16 mr-3 rounded-full">
+                <h1 class="text-3xl font-extrabold text-agro-green-500">AGRO LEASING</h1>
+            </div>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 text-lg font-semibold">
+                    <li><a href="#home" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Domů</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">O nás</a></li>
+                    <li><a href="#services" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Služby</a></li>
+                    <li><a href="#advantages" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Proč s námi</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-agro-green-500 text-white py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://placehold.co/1920x1080/388E3C/FFFFFF?text=Zemědělská+technika" alt="Zemědělská technika pozadí" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Vaše cesta k moderní zemědělské technice
+            </h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fade-in-up">
+                Financujeme stroje a zařízení pro zemědělství, lesnictví a komunální služby.
+            </p>
+            <a href="#contact" class="bg-white text-agro-green-500 font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                Zjistěte více
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-agro-green-500 mb-12">O společnosti AGRO LEASING</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-6">
+                    AGRO LEASING je předním poskytovatelem finančních služeb v oblasti zemědělské, lesnické a komunální techniky. Naše dlouholeté zkušenosti a hluboké znalosti trhu nám umožňují nabízet flexibilní a individuální řešení pro každého klienta.
+                </p>
+                <p>
+                    Jsme partnerem, který rozumí vašim potřebám a pomáhá vám růst. S námi získáte přístup k nejmodernějším technologiím bez nutnosti velkých počátečních investic.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-agro-green-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-agro-green-500 mb-12 text-center">Naše služby</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105">
+                    <div class="bg-agro-green-500 text-white rounded-full p-4 mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a2 2 0 012 2v8a2 2 0 01-2 2H6a3 3 0 01-3-3V6zm4 0a1 1 0 011-1h6a1 1 0 110 2H8a1 1 0 01-1-1zm1 5a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Finanční leasing</h3>
+                    <p class="text-gray-700">
+                        Získejte techniku do užívání s možností následného odkupu. Ideální pro dlouhodobé investice.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105">
+                    <div class="bg-agro-green-500 text-white rounded-full p-4 mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 002-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Operativní leasing</h3>
+                    <p class="text-gray-700">
+                        Využívejte techniku bez starostí o vlastnictví a servis. Ideální pro krátkodobé potřeby.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105">
+                    <div class="bg-agro-green-500 text-white rounded-full p-4 mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 110-6 3 3 0 010 6z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Úvěry na techniku</h3>
+                    <p class="text-gray-700">
+                        Nabízíme výhodné úvěry pro nákup nové i použité zemědělské techniky.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-agro-green-500 mb-12 text-center">Proč si vybrat AGRO LEASING?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6 text-lg text-gray-700">
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-agro-green-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800 mb-1">Individuální přístup</h3>
+                            <p>Každému klientovi se věnujeme s maximální péčí a připravujeme řešení na míru.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-agro-green-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800 mb-1">Rychlé vyřízení</h3>
+                            <p>Proces schvalování a vyřízení leasingu je u nás rychlý a efektivní.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-agro-green-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800 mb-1">Transparentní podmínky</h3>
+                            <p>Žádné skryté poplatky, vše je jasné a srozumitelné od začátku.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Moderní+zemědělství" alt="Moderní zemědělství" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-agro-green-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">Kontaktujte nás</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Máte dotazy nebo zájem o naše služby? Neváhejte nás kontaktovat!
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12 space-y-8 md:space-y-0">
+                <div class="flex items-center text-lg">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.5a1 1 0 01-2 0V3a1 1 0 011-1zm4.356 2.356a1 1 0 010 1.414l-1.414 1.414a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM17 10a1 1 0 01-1 1h-1.5a1 1 0 010-2H16a1 1 0 011 1zM4.356 14.356a1 1 0 01-1.414 1.414l-1.414-1.414a1 1 0 011.414-1.414l1.414 1.414zM10 17a1 1 0 01-1 1H3a1 1 0 01-1-1v-6a1 1 0 011-1h6a1 1 0 011 1v6z" clip-rule="evenodd"></path></svg>
+                    <span>+420 123 456 789</span>
+                </div>
+                <div class="flex items-center text-lg">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0018 4H2a2 2 0 00-.003 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    <span>info@agroleasing.cz</span>
+                </div>
+                <div class="flex items-center text-lg">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    <span>Naše adresa, Město, PSČ</span>
+                </div>
+            </div>
+            <a href="#" class="mt-12 inline-block bg-white text-agro-green-800 font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                Vyplnit kontaktní formulář
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 AGRO LEASING. Všechna práva vyhrazena.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-agro-green-500 transition-colors duration-300">Ochrana osobních údajů</a>
+                <a href="#" class="hover:text-agro-green-500 transition-colors duration-300">Podmínky použití</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
