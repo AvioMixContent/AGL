@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body{font-family:'Inter',sans-serif;}
+        /* Barvy webu (zachovány podle předchozí verze) */
         .bg-agro-green-500{background-color:#4CAF50;}
         .text-agro-green-500{color:#4CAF50;}
         .border-agro-green-500{border-color:#4CAF50;}
@@ -16,6 +17,22 @@
         .bg-agro-green-800{background-color:#2E7D32;}
         /* Skrytí a zobrazení dropdownu na hover */
         .group:hover .group-hover\:block { display: block; }
+
+        /* Vylepšený hover efekt pro navigační odkazy */
+        .nav-link-hover-effect {
+            position: relative;
+            display: block; /* Aby se padding a transform aplikovaly správně */
+            padding: 0.5rem 0.75rem; /* Zachování původního py-2 a px-3 */
+            transition: all 0.3s ease-in-out; /* Plynulá animace */
+            border-radius: 0.5rem; /* rounded-md */
+            color: #4A5568; /* Původní barva textu pro navigační odkazy */
+        }
+        .nav-link-hover-effect:hover {
+            background-color: #E8F5E9; /* Použijte bg-agro-green-100 */
+            color: #4CAF50; /* Použijte text-agro-green-500 */
+            transform: translateY(-2px); /* Mírný posun nahoru */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Jemný stín */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -48,19 +65,19 @@
                 </div>
                 <nav aria-label="Hlavní navigace">
                     <ul class="flex flex-wrap justify-center md:justify-end space-x-3 md:space-x-6 text-base font-semibold">
-                        <li class="py-2"><a href="#home" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Domů</a></li>
-                        <li class="relative group py-2">
-                            <a href="#services" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300 cursor-pointer flex items-center">
+                        <li><a href="#home" class="text-gray-700 nav-link-hover-effect">Domů</a></li>
+                        <li class="relative group">
+                            <a href="#services" class="text-gray-700 cursor-pointer flex items-center nav-link-hover-effect">
                                 Služby
                                 <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </a>
                             <ul id="services-dropdown" class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-0 py-2 w-48 z-20">
                                 </ul>
                         </li>
-                        <li class="py-2"><a href="#contract" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Uzavření smlouvy</a></li>
-                        <li class="py-2"><a href="https://www.agroleasing.cz/blog/" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Blog</a></li>
-                        <li class="py-2"><a href="#advantages" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Proč s námi</a></li>
-                        <li class="py-2"><a href="#contact" class="text-gray-700 hover:text-agro-green-500 transition-colors duration-300">Kontakt</a></li>
+                        <li><a href="#contract" class="text-gray-700 nav-link-hover-effect">Uzavření smlouvy</a></li>
+                        <li><a href="https://www.agroleasing.cz/blog/" target="_blank" rel="noopener noreferrer" class="text-gray-700 nav-link-hover-effect">Blog</a></li>
+                        <li><a href="#advantages" class="text-gray-700 nav-link-hover-effect">Proč s námi</a></li>
+                        <li><a href="#contact" class="text-gray-700 nav-link-hover-effect">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
@@ -261,7 +278,7 @@
             {
                 heading: "Vaše cesta k flexibilnímu financování",
                 paragraph: "Nabízíme finanční leasing, zpětný leasing, úvěry a pojištění s individuálním přístupem pro modernizaci a růst vašeho podnikání.",
-                image: "https://placehold.co/1920x1080/388E3C/FFFFFF?text=Zemědělská,+stavební+a+dopravní+technika&font_size=60"
+                image: "https://placehold.co/1920x1080/4CAF50/FFFFFF?text=Zemědělská,+stavební+a+dopravní+technika&font_size=60"
             },
             {
                 heading: "Nová éra, původní hodnoty",
