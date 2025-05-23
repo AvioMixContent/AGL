@@ -18,12 +18,12 @@
         /* Skrytí a zobrazení dropdownu na hover */
         .group:hover .group-hover\:block { display: block; }
 
-        /* Vylepšený hover efekt pro navigační odkazy */
+        /* Vylepšený hover efekt pro navigační odkazy - nyní plně definuje vzhled */
         .nav-link-hover-effect {
             position: relative;
-            display: block; /* Aby se padding a transform aplikovaly správně */
-            padding: 0.5rem 0.75rem; /* Zachování původního py-2 a px-3 */
-            transition: all 0.3s ease-in-out; /* Plynulá animace */
+            display: block;
+            padding: 0.5rem 0.75rem; /* py-2 px-3 */
+            transition: all 0.3s ease-in-out;
             border-radius: 0.5rem; /* rounded-md */
             color: #4A5568; /* Původní barva textu pro navigační odkazy */
         }
@@ -65,19 +65,19 @@
                 </div>
                 <nav aria-label="Hlavní navigace">
                     <ul class="flex flex-wrap justify-center md:justify-end space-x-3 md:space-x-6 text-base font-semibold">
-                        <li><a href="#home" class="text-gray-700 nav-link-hover-effect">Domů</a></li>
+                        <li><a href="#home" class="nav-link-hover-effect">Domů</a></li>
                         <li class="relative group">
-                            <a href="#services" class="text-gray-700 cursor-pointer flex items-center nav-link-hover-effect">
+                            <a href="#services" class="cursor-pointer flex items-center nav-link-hover-effect">
                                 Služby
                                 <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </a>
                             <ul id="services-dropdown" class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-0 py-2 w-48 z-20">
                                 </ul>
                         </li>
-                        <li><a href="#contract" class="text-gray-700 nav-link-hover-effect">Uzavření smlouvy</a></li>
-                        <li><a href="https://www.agroleasing.cz/blog/" target="_blank" rel="noopener noreferrer" class="text-gray-700 nav-link-hover-effect">Blog</a></li>
-                        <li><a href="#advantages" class="text-gray-700 nav-link-hover-effect">Proč s námi</a></li>
-                        <li><a href="#contact" class="text-gray-700 nav-link-hover-effect">Kontakt</a></li>
+                        <li><a href="#contract" class="nav-link-hover-effect">Uzavření smlouvy</a></li>
+                        <li><a href="https://www.agroleasing.cz/blog/" target="_blank" rel="noopener noreferrer" class="nav-link-hover-effect">Blog</a></li>
+                        <li><a href="#advantages" class="nav-link-hover-effect">Proč s námi</a></li>
+                        <li><a href="#contact" class="nav-link-hover-effect">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
@@ -325,7 +325,8 @@
                 const link = document.createElement('a');
                 link.href = "#services"; // Links to the services section
                 link.textContent = titleElement.textContent;
-                link.classList.add('block', 'px-4', 'py-2', 'text-gray-800', 'hover:bg-agro-green-100', 'hover:text-agro-green-500');
+                // Přidání třídy nav-link-hover-effect k položkám rozbalovacího menu
+                link.classList.add('nav-link-hover-effect');
                 listItem.appendChild(link);
                 servicesDropdown.appendChild(listItem);
             });
