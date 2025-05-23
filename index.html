@@ -12,12 +12,12 @@
             font-family: 'Inter', sans-serif;
         }
         /* Definice vlastní zelené barevné palety pro konzistentní branding */
-        .bg-agro-green-500 { background-color: #4CAF50; } /* Živá zelená */
+        .bg-agro-green-500 { background-color: #4CAF50; }
         .text-agro-green-500 { color: #4CAF50; }
         .border-agro-green-500 { border-color: #4CAF50; }
-        .hover\:bg-agro-green-600:hover { background-color: #43A047; } /* Lehce tmavší zelená pro efekt při najetí myší */
-        .bg-agro-green-100 { background-color: #E8F5E9; } /* Světle zelená pro pozadí */
-        .bg-agro-green-800 { background-color: #2E7D32; } /* Tmavší zelená pro zápatí a akcenty */
+        .hover\:bg-agro-green-600:hover { background-color: #43A047; }
+        .bg-agro-green-100 { background-color: #E8F5E9; }
+        .bg-agro-green-800 { background-color: #2E7D32; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -26,7 +26,8 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center max-w-5xl">
             <div class="flex items-center mb-3 md:mb-0">
                 <img src="https://placehold.co/60x60/4CAF50/FFFFFF?text=AGRO" alt="Logo AGRO LEASING" class="h-14 w-14 mr-3 rounded-full">
-                <div class="text-center"> <h1 class="text-2xl font-extrabold text-agro-green-500">AGRO LEASING</h1>
+                <div class="text-center">
+                    <h1 class="text-2xl font-extrabold text-agro-green-500">AGRO LEASING</h1>
                     <p class="text-sm text-black -mt-1">automobily <span class="text-agro-green-500">&</span> stroje</p>
                 </div>
             </div>
@@ -46,15 +47,11 @@
     <main>
         <section id="home" class="relative bg-agro-green-500 text-white py-16 md:py-24 overflow-hidden">
             <div class="absolute inset-0 z-0 opacity-20">
-                <img src="https://placehold.co/1920x1080/388E3C/FFFFFF?text=Zemědělská,+stavební+a+dopravní+technika&font_size=60" alt="Zemědělská, stavební a dopravní technika pozadí" class="w-full h-full object-cover">
+                <img id="home-bg-image" src="" alt="" class="w-full h-full object-cover">
             </div>
             <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl">
-                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down">
-                    Vaše cesta k flexibilnímu financování
-                </h2>
-                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up">
-                    Nabízíme finanční leasing, zpětný leasing, úvěry a pojištění s individuálním přístupem pro modernizaci a růst vašeho podnikání.
-                </p>
+                <h2 id="home-heading" class="text-3xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down"></h2>
+                <p id="home-paragraph" class="text-lg md:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up"></p>
                 <a href="#contact" class="bg-white text-agro-green-500 font-bold py-2 px-6 rounded-full text-base shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                     Zjistěte více
                 </a>
@@ -224,5 +221,58 @@
         </div>
     </footer>
 
+    <script>
+        // Pole s daty pro jednotlivé teasery
+        const teasers = [
+            {
+                heading: "Vaše cesta k flexibilnímu financování",
+                paragraph: "Nabízíme finanční leasing, zpětný leasing, úvěry a pojištění s individuálním přístupem pro modernizaci a růst vašeho podnikání.",
+                image: "https://placehold.co/1920x1080/388E3C/FFFFFF?text=Zemědělská,+stavební+a+dopravní+technika&font_size=60"
+            },
+            // Nový teaser zařazený na druhé místo
+            {
+                heading: "Nová éra, původní hodnoty",
+                paragraph: "Spolehlivě, odpovědně, s respektem",
+                image: "https://placehold.co/1920x1080/4CAF50/FFFFFF?text=Rozumíme+Vám&font_size=100" // Změněn text na pozadí a zvětšeno písmo
+            },
+            {
+                heading: "Rychlé schválení, individuální řešení",
+                paragraph: "Získejte financování, které potřebujete, s minimem byrokracie a maximální flexibilitou.",
+                image: "https://placehold.co/1920x1080/4CAF50/FFFFFF?text=Rychlé+schválení&font_size=60"
+            },
+            {
+                heading: "Modernizujte svůj vozový park s námi",
+                paragraph: "Ať už potřebujete nový traktor, stavební stroj nebo nákladní automobil, máme pro vás řešení.",
+                image: "https://placehold.co/1920x1080/2E7D32/FFFFFF?text=Moderní+vozový+park&font_size=60"
+            }
+        ];
+
+        let currentTeaserIndex = 0; // Index aktuálně zobrazeného teaseru
+
+        // Funkce pro aktualizaci obsahu teaseru
+        function updateTeaser() {
+            const homeHeading = document.getElementById('home-heading');
+            const homeParagraph = document.getElementById('home-paragraph');
+            const homeBgImage = document.getElementById('home-bg-image');
+
+            // Získání dat pro aktuální teaser
+            const currentTeaser = teasers[currentTeaserIndex];
+
+            // Aktualizace obsahu HTML elementů
+            homeHeading.textContent = currentTeaser.heading;
+            homeParagraph.textContent = currentTeaser.paragraph;
+            homeBgImage.src = currentTeaser.image;
+            homeBgImage.alt = currentTeaser.heading + " pozadí"; // Aktualizace alt textu
+
+            // Posun na další teaser, nebo zpět na začátek, pokud jsme na konci
+            currentTeaserIndex = (currentTeaserIndex + 1) % teasers.length;
+        }
+
+        // Spuštění prvního teaseru ihned po načtení stránky
+        document.addEventListener('DOMContentLoaded', updateTeaser);
+
+        // Nastavení intervalu pro střídání teaserů (každých 10 sekund)
+        setInterval(updateTeaser, 10000); // 10000 ms = 10 sekund
+    </script>
 </body>
 </html>
